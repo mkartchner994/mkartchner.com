@@ -1,0 +1,227 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Open+Sans|Oswald);
+.loading{
+	text-align: center;
+	font-size: 2rem;
+}
+body{
+	font-size: 2.0rem;
+	line-height: 1.6em;
+	color: #3A4145;
+	background-repeat: repeat;
+}
+.preload{ 
+	display: none; 
+}
+footer{
+	height:70px;
+	line-height:70px;
+	background:#333;
+	text-align:center;
+	font-family: 'Lato', sans-serif;
+	color:#fff;
+	font-size: .9rem;
+}
+#scrolltop {
+	font-size: 40px;
+	position: fixed;
+	right: 35px;
+	bottom: 5px;
+	display: none;
+}
+#scrolltop.scroll{
+	display: block;
+}
+/*BACKGROUNDS*/
+body.resume{background-image: url(/images/bg.png);}
+body.projects{background-image: url(/images/moulin.png);}
+body.project-overview{background-image: url(/images/stardust.png);}
+body.contact{background-image: url(/images/binding_dark.png);}
+/*http://subtlepatterns.com/*/
+/*END BACKGROUNDS*/
+
+/*FOUNDATION OVERIDES*/
+.top-bar{
+	height:50px;
+	background:transparent;
+	text-align:right;
+	padding:0 10px;
+	position:fixed;
+	top: 0;
+	z-index: 999;
+	width:100%;
+}
+.top-bar.scroll{
+	background:rgba(0,0,0,.5);
+}
+.top-bar a{
+	margin:0 15px;
+	line-height:50px;
+	font-size:1rem;
+	font-family: 'Lato', sans-serif;
+}
+.top-bar.scroll a{
+	color: #fff;
+}
+.top-bar.scroll a:hover,
+.top-bar.scroll a:focus,
+.top-bar.scroll a:active{
+	color: #E6E6E6;
+}
+.button{
+	font-size:2rem;
+	font-family: 'Lato', sans-serif;
+}
+/*END FOUNDATION OVERIDES*/
+.page-heading{
+	margin-top: 50px;
+}
+.page-heading h2{
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+	text-align: center;
+	padding: 50px 15px;
+	text-shadow: 1px 2px 0px #333;
+}
+.page-content{
+	background: white;
+	min-height:500px;
+}
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6{
+	font-family: 'Oswald', sans-serif;
+	margin: 0.6em 0;
+}
+.page-content h3{
+	font-size: 3.5rem;
+}
+.page-content p{
+	font-family: 'Open Sans', sans-serif;
+	margin: 1.6em 0;
+}
+.page-container{
+	max-width: 860px;
+	margin: 0 auto;
+	padding: 0 30px;
+	overflow: hidden;
+}
+.page-content p.page-tagline,
+.page-content p.page-desc{
+	text-align: center;
+	font-size: 1.3rem;
+}
+.page-content p.page-tagline{
+	max-width: 450px;
+	margin: 1.6em auto;
+}
+.page-content img{
+	border: 1px solid #f2f2f2;
+}
+/*CONTACT*/
+input.contact-input,
+textarea.contact-input{
+	box-shadow: none;
+	border: none;
+	border-top:1px solid #ddd; 
+	font-size: 2.5rem;
+	height: auto;
+	margin-bottom: 0;
+	font-family: 'Open Sans', sans-serif;
+	resize: none;
+}
+input.contact-input:focus,
+textarea.contact-input:focus{
+	box-shadow: none;
+	border-color: #999;
+}
+/*END CONTACT*/
+
+/*TRANSITIONS*/
+.page-heading,
+.page-content {
+	opacity: 0;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+.page-heading.in {
+	-webkit-animation-name: slideDown;
+          	animation-name: slideDown;
+}
+.page-content.in {
+	-webkit-animation-name: slideUp;
+            animation-name: slideUp;
+}
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  0% {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+/*END TRANSITIONS*/
